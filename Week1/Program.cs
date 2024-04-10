@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Prime(17));
+           // Console.WriteLine(Prime(17));
+            Console.WriteLine(Sum());
         }
         public static bool Prime(int n)
         {
@@ -17,5 +18,17 @@
             }
             return true;
         }
+        public static decimal Sum()
+        {
+            string[] input = Console.ReadLine().Split(",");
+            decimal result = 0;
+
+            for (int i = 0; i < input.Length; i++) 
+            {
+                result += decimal.Parse(input[i]);
+            }
+            return result;
+        }
+
     }
 }
