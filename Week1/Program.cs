@@ -4,8 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Prime(17));
-            Console.WriteLine(Sum());
+            // Console.WriteLine(Prime(17));
+            // Console.WriteLine(Sum());
+            // Console.WriteLine(Course());
+            God();
         }
         public static bool Prime(int n)
         {
@@ -55,6 +57,19 @@
                 }
             }
             return true;
+        }
+        public static void God()
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            if (n % 4 == 0 && n % 100 != 0 || n % 400 == 0)  
+            {
+                Console.WriteLine("Visokosna");
+            }
+            else
+            {
+                Console.WriteLine("Ne e visokosna");
+            }
         }
     }
 }
