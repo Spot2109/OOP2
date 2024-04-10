@@ -71,5 +71,32 @@
                 Console.WriteLine("Ne e visokosna");
             }
         }
+        public static void Mesec() 
+        {
+            int n = int.Parse(Console.ReadLine());
+            int m = int.Parse(Console.ReadLine());
+            bool v = (n % 4 == 0 && n % 100 != 0 || n % 400 == 0) ? true : false;
+
+            switch (m)
+            {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    Console.WriteLine("31");
+                    break;
+                case 6:
+                case 9:
+                case 11:
+                    Console.WriteLine("30");
+                    break;
+                case 2:
+                    Console.WriteLine(v ? "29" : "28");
+                    break;
+            }
+        }
     }
 }
