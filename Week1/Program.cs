@@ -4,14 +4,18 @@
     {
         static void Main(string[] args)
         {
-           int n = int.Parse(Console.ReadLine());
-           int sum = 0;
+            Console.WriteLine(Prime(17));
+        }
+        public static bool Prime(int n)
+        {
+            int sqrt = (int)Math.Sqrt(n);
 
-            for(int i = 1; i <= n; i++)
+            for(int i = 2; i <= sqrt;i++)
             {
-                sum += i;
+                if(n % i == 0)
+                    return false;
             }
-            Console.WriteLine(sum);
+            return true;
         }
     }
 }
